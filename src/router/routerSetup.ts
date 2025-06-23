@@ -1,9 +1,6 @@
-import FrameworkMain from "../views/FrameworkMain.vue";
-
 export function setFrameworkRoutes(router: any) {
-    return router.addRoute({
-    path: '/fw',
-    component: FrameworkMain,
-    children: []
+   router.addRoute('fw', {
+    path: '',
+    component: () => import('../views/FrameworkMain.vue')
   });
 }
